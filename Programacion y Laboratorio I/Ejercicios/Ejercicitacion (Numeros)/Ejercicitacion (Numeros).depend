@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1489763976 source:d:\mis documentos\ejercicios\ejercicitacion (numeros)\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+
