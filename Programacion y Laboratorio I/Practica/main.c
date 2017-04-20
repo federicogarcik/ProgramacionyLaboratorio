@@ -6,6 +6,7 @@ int main()
     char buffer[2000];
     char nombre[20];
     char apellido[20];
+    char apeNombre[20];
 
     printf("ingrese su nombre: ");
     gets(buffer);
@@ -25,9 +26,9 @@ int main()
         gets(buffer);
     }
     strcpy(apellido, buffer);
-    strcpy(buffer, nombre);
-    strcat(buffer, " ");
-    strcat(buffer, apellido);
+    strcpy(apeNombre, nombre);
+    strcat(apeNombre, " ");
+    strcat(apeNombre, apellido);
     printf("%s", buffer);
     return 0;
 }
