@@ -26,9 +26,12 @@ int main()
         gets(buffer);
     }
     strcpy(apellido, buffer);
-    strcpy(apeNombre, nombre);
+    buffer[0] = buffer[0] - 32;
+    strcpy(apeNombre, buffer);
     strcat(apeNombre, " ");
-    strcat(apeNombre, apellido);
-    printf("%s", buffer);
+    strcpy(buffer, nombre);
+    buffer [0] = buffer[0] - 32;
+    strcat(apeNombre, buffer);
+    printf("%s", apeNombre);
     return 0;
 }
