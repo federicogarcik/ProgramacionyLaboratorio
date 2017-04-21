@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1492787253 source:c:\users\alumno\desktop\abm estructuras\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Series.h"
+
+1492787237 c:\users\alumno\desktop\abm estructuras\series.h
+
+1492787237 source:c:\users\alumno\desktop\abm estructuras\series.c
+	"Series.h"
+	<conio.h>
+
