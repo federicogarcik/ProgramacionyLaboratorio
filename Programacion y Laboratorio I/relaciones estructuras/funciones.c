@@ -123,25 +123,47 @@ void mostrarClientesTBBT(eCliente clientes[], int capacidadClientes)
 }
 void mostrarSerieLoser(eCliente clientes[], eSerie series[], int capacidadSeries, int capacidadClientes)
 {
-    int i;
-    int l;
-    int serieMin = 0;
-    int contAux = 0
-    int serieLoser[30];
-    for(i = 0; i < capacidadSeries; i++)
-    {
-        if(serieMin > contAux)
-        {
-
-            serieMin = contAux;
-            strcpy(serieLoser, series[i].titulo);
-        }
-        for(l = 0; l < capacidadClientes; l++)
-        {
-            if(series[i].idSerie == clientes[l].idCliente)
-            {
-                contAux++;
-            }
-        }
-    }
+   eLoser loser[5];
+   int i;
+   int j;
+   int banderaMin;
+   int min;
+   for(i = 0; i < capacidadSeries; i++)
+   {
+       loser[i].idSerie = series[i].idSerie;
+       loser[i].cont = 0;
+   }
+   for(i = 0; i < capacidadSeries; i++)
+   {
+       for(j = 0; j < capacidadClientes; j++)
+       {
+           if(loser[i].idSerie == clientes[j].idSerie)
+           {
+               loser[i].cont++;
+           }
+       }
+   }
+   for(i = 0; i < capacidadSeries; i++)
+   {
+       if(banderaMin == 0 || loser[i].cont < min)
+       {
+           banderaMin = 1;
+           min = loser[i].cont;
+       }
+   }
+   for(i = 0; i < capacidadSeries; i++)
+   {
+       if(loser[i].cont == min)
+       {
+           for(j = 0; j < capacidadSeries; j++)
+           {
+               if(loser[i].idSerie == series[j].idSerie)
+               {
+                   printf("%s", series[j].titulo);
+                   break;
+               }
+           }
+       }
+   }
 }
+

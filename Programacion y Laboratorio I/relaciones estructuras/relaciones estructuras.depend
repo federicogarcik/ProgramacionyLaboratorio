@@ -12,3 +12,16 @@
 	<stdlib.h>
 	"funciones.h"
 
+1493306056 source:c:\users\alumno\downloads\programacionylaboratorio-master\programacion y laboratorio i\relaciones estructuras\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+
+1493306056 c:\users\alumno\downloads\programacionylaboratorio-master\programacion y laboratorio i\relaciones estructuras\funciones.h
+
+1493383999 source:c:\users\alumno\downloads\programacionylaboratorio-master\programacion y laboratorio i\relaciones estructuras\funciones.c
+	"funciones.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+

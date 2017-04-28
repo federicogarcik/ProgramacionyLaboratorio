@@ -19,10 +19,10 @@ int main()
     mostrarClientesConSerie(clientes, series, B, A);
     printf("\n*********************************************************\n\nSERIES CON CLIENTES:\n");
     mostrarSeriesConClientes(clientes, series, B, A);
-    printf("\n*********************************************************\n\nCLIENTES QUE VEN TBBT:\n");
+    printf("\n********************************for(j = 0; i < capacidadSeries; i++)*************************\n\nCLIENTES QUE VEN TBBT:\n");
     mostrarClientesTBBT(clientes, B);
     printf("\n*********************************************************\n\nSERIE MENOS VISTA:\n");
-    mostrarSerieLoser()
+    mostrarSerieLoser(clientes, series, A, B);
 
 
     return 0;
