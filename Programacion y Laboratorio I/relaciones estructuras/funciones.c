@@ -91,17 +91,12 @@ void mostrarSeriesConClientes(eCliente clientes[], eSerie series[], int capacida
     int l;
     for (i = 0; i < capacidadSeries; i++)
     {
+        printf("%s: \n", series[i].titulo);
         for(l = 0; l < capacidadClientes; l++)
         {
             if(series[i].idSerie == clientes[l].idSerie)
             {
-                printf("%d\t", series[i].idSerie);
-                printf("%s\t", series[i].titulo);
-                printf("%d\t", series[i].temporadas);
-                printf("%s\t\t", series[i].genero);
-                printf("%s\t", clientes[l].nombre);
-                printf("%d\n", series[i].estado);
-                break;
+                printf("%s\n", clientes[l].nombre);
             }
         }
     }
