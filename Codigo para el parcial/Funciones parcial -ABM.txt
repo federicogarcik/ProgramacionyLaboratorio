@@ -1,0 +1,164 @@
+MENU:
+char seguir = 's';
+int opcion;
+ 
+while(seguir=='s')
+    {
+        printf("1- \n");
+        printf("2- \n");
+        printf("3- \n");
+        printf("4- \n");
+        printf("5- Salir\n");
+
+        scanf("%d",&opcion);
+        switch(opcion)
+        {
+            case 1:
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                seguir = 'n';
+                break;
+        }
+    }
+
+     *********************************************************
+ALTAS:
+
+/** \brief  carga los datos de una persona
+ *
+ * \param lista: el array
+ * \param indice: indice del array en donde se va a cargar los datos
+ *
+ */
+ 
+//¡¡Modificar los printf dependiendo de los nombres de los campos!!
+
+void cargarDatos(EPersona lista[], int indice)
+{
+    printf("Introdusca el dni\n");
+    scanf("%d", &lista[indice].dni);
+    printf("Introdusca la edad\n");
+    scanf("%d", &lista[indice].edad);
+    printf("Introdusca el nombre\n");
+    fflush(stdin);
+    gets(lista[indice].nombre);
+
+    lista[indice].estado = 1;
+}
+
+****************************************************************
+
+/** \brief pone el estado de los indices del array en cero
+ *
+ * \param lista: el array
+ * \param capacidad: el tamaño del array
+ * \param bandera: bandera que indica si ya se han puesto los estados en 0
+ */
+
+void estadoLibre(EPersona lista[], int capacidad, int bandera)
+{
+    if(bandera ==0)
+    {
+        int i;
+        for(i = 0; i < (capacidad+1); i++)
+        {
+            lista[i].estado = 0;
+        }
+    }
+}
+
+****************************************************************
+
+/**
+ * Obtiene el primer indice libre del array.
+ * @param lista el array se pasa como parametro.
+ * @param capacidad: el tamaño del array
+ * @return el primer indice disponible
+ */
+
+int obtenerEspacioLibre(EPersona lista[], int capacidad)
+{
+    int i;
+    for(i = 0; i < capacidad; i++)
+    {
+        if(lista[i].estado == 0)
+        {
+            break;
+        }
+    }
+    return i;
+}
+
+****************************************************************
+
+/** \brief auto incrementa un  numero y lo guarda como dato en el array
+  *
+  * \param abonados: el array
+  * \param capacidad: tamaño del array
+  *
+  */
+
+ void autoIncremento(Eabonado abonados[], int capacidad);
+{
+     int i;
+     int acumuladorAux = 0;
+     for(i = 0; i < capacidad; i++)
+     {
+         acumuladorAux = acumuladorAux + 1;
+         abonados[i].idAbonado == acumuladorAux;
+     }
+ }
+
+****************************************************************
+
+BAJAS:
+
+/**
+ * Obtiene el indice que coincide con el dni pasado por parametro.
+ * @param lista el array se pasa como parametro.
+ * @param dni el dni a ser buscado en el array.
+ * \param capacidad: el tamaño del array
+ * @return el indice en donde se encuentra el elemento que coincide con el parametro dni
+ */
+
+//sirve para ubicar la persona o objeto a dar de baja (modificable)
+
+int buscarPorDni(EPersona lista[], int dni, int capacidad)
+{
+    int banderaDni = 0;
+    int i;
+    for(i = 0; i < capacidad; i++)
+    {
+        if(lista[i].dni == dni)
+        {
+            banderaDni = 1;
+            break;
+        }
+        if(banderaDni == 0)
+        {
+            printf("ERROR: dni inexistente\n");
+        }
+    }
+    return i;
+}
+
+****************************************************************
+
+
+void darDeBaja(EPersona lista[], int indice)
+{
+    lista[indice].estado = 0;
+    printf("Se ha dado de baja a %s DNI: %d\n", lista[indice].nombre, lista[indice].dni);
+}
+***************************************************************MMODIFICACIONES:
+
+USAR LOS PRINTF Y SCANF DE LA FUNCION CARGAR DATOS, EN EL INDICE INDICADO.
+
+****************************************************************
+
