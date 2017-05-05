@@ -11,6 +11,9 @@ int main()
     for(i = 0; i < 5; i++)
     {
         *(p + i) = 0;
+    }
+    for(i = 0; i < 5; i++)
+    {
          printf("%d\n", *p);
     }
 
