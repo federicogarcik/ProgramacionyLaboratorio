@@ -3,6 +3,9 @@
 
 int main()
 {
+    /*TAREA: una funcion que carge el vector con los valore que ingrese el usuario,
+    otra funcion que me permita ordenar esos valores a tra vez del puntero y otra funcion que muestre el vector ordenado;
+    */
     int x[5];
     int* p;
     p = x;
