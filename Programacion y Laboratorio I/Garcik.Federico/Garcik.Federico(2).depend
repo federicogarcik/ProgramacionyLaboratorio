@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1493909571 source:d:\parcial(temporal)\garcik.federico(2)\estacionamiento.c
+	<stdio.h>
+	<stdlib.h>
+	"estacionamiento.h"
+	<string.h>
+
+1493909832 d:\parcial(temporal)\garcik.federico(2)\estacionamiento.h
+
+1493909580 source:d:\parcial(temporal)\garcik.federico(2)\main.c
+	<stdio.h>
+	<stdlib.h>
+	"estacionamiento.h"
+
