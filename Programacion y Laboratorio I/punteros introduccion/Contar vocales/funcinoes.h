@@ -1,0 +1,1 @@
+int contarVocales(char* input);

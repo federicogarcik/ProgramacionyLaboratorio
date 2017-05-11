@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1494504812 source:c:\users\alumno\desktop\contar vocales\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"funcinoes.h"
+
+1494505011 source:c:\users\alumno\desktop\contar vocales\funciones.c
+	"funcinoes.h"
+
+1494504319 c:\users\alumno\desktop\contar vocales\funcinoes.h
+
