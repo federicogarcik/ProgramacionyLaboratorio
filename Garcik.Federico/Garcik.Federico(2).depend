@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1493909571 source:d:\parcial(temporal)\garcik.federico(2)\estacionamiento.c
+	<stdio.h>
+	<stdlib.h>
+	"estacionamiento.h"
+	<string.h>
+
+1493909832 d:\parcial(temporal)\garcik.federico(2)\estacionamiento.h
+
+1493909580 source:d:\parcial(temporal)\garcik.federico(2)\main.c
+	<stdio.h>
+	<stdlib.h>
+	"estacionamiento.h"
+
+1494471405 source:c:\users\fede\downloads\programacionylaboratorio-master (2)\programacionylaboratorio-master\programacion y laboratorio i\garcik.federico\estacionamiento.c
+	<stdio.h>
+	<stdlib.h>
+	"estacionamiento.h"
+	<string.h>
+
+1494469676 c:\users\fede\downloads\programacionylaboratorio-master (2)\programacionylaboratorio-master\programacion y laboratorio i\garcik.federico\estacionamiento.h
+
+1494469665 source:c:\users\fede\downloads\programacionylaboratorio-master (2)\programacionylaboratorio-master\programacion y laboratorio i\garcik.federico\main.c
+	<stdio.h>
+	<stdlib.h>
+	"estacionamiento.h"
+
+1494516055 source:c:\users\alumno\desktop\garcik.federico\main.c
+	<stdio.h>
+	<stdlib.h>
+	"estacionamiento.h"
+
+1494516133 c:\users\alumno\desktop\garcik.federico\estacionamiento.h
+
+1494516442 source:c:\users\alumno\desktop\garcik.federico\estacionamiento.c
+	<stdio.h>
+	<stdlib.h>
+	"estacionamiento.h"
+	<string.h>
+
