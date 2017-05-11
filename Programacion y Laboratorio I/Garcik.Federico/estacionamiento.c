@@ -497,7 +497,7 @@ void mostrarPropietariosConAutosAudi(Eautomovil automovil[], int capacidadAutos,
             {
                 if(propietario[j].idPropietarios == automovil[i].idPropietarios)
                 {
-                    printf("ID:\n %d\t Nombre y apellido\n %s\t  direccion\n %d\t  Numero de tarjeta de credito\n %d\n", propietario[i].idPropietarios, propietario[i].nombreYApellido, propietario[i].direccion, propietario[i].NumeroTarjetaDeCredito);
+                    printf("ID: %d\t Nombre y apellido: %s\t  direccion: %d\t  Numero de tarjeta de credito: %d\n", propietario[i].idPropietarios, propietario[i].nombreYApellido, propietario[i].direccion, propietario[i].NumeroTarjetaDeCredito);
                 }
             }
         }
@@ -564,12 +564,56 @@ int mostrarRecaudacionTotalPorMarca(Eautomovil automovil[], int capacidad)
 void mostrar(Eautomovil automovil[], int capacidadAutos, Epropietarios propietario[], int capacidadPropietarios, Eautomovil autoAux[], int flagCarga, int flagCargaAutos)
 {
     int sumaTotal;
-    printf("*********************AUTOS CON PROPIETARIOS ORDENADO POR HORARIO DE ENTRADA*****************************\n");
+    printf("************AUTOS CON PROPIETARIOS ORDENADO POR HORARIO DE ENTRADA*************\n");
     mostrarAutosConPropietarios(automovil, propietario, capacidadPropietarios, capacidadAutos, autoAux, flagCarga, flagCargaAutos);
-    printf("***********************PROPIETARIOS CON AUTO AUDI*************************\n");
+    printf("***********************PROPIETARIOS CON AUTO AUDI******************************\n");
     mostrarPropietariosConAutosAudi(automovil, capacidadAutos, propietario, capacidadPropietarios);
-    printf("************************RECAUDACION TOTAL POR MARCA*************************\n");
+    printf("************************RECAUDACION TOTAL POR MARCA****************************\n");
     sumaTotal = mostrarRecaudacionTotalPorMarca(automovil, capacidadAutos);
-    printf("************************RECAUDACION TOTAL POR ESTACIONAMIENTO**************\n");
+    printf("************************RECAUDACION TOTAL POR ESTACIONAMIENTO******************\n");
     printf("La recaudacion total del estacionamiento es de: %d \n", sumaTotal);
+}
+
+void cargarPropietarios(Epropietarios propietarios[])
+{
+    int i;
+    int id[10] = {1,2,3,4,5,6,7,8,9,10};
+    char nombres[10][30]= {"juan","maria","pedro","luis","romina","jose","andrea","patricia","luciano","camila"};
+    int estado[10]= {1,1,1,1,1,1,1,1,1,1};
+    int direccion[10] = {1,2,3,4,5,6,7,8,9,10};
+    int numeroTarjeta[10] = {458,654,489,654,458,125,687,952,485,658};
+
+    for(i=0; i<10; i++)
+    {
+        propietarios[i].idPropietarios = id[i];
+        strcpy(propietarios[i].nombreYApellido, nombres[i]);
+        propietarios[i].estado = estado[i];
+        propietarios[i].direccion = direccion[i];
+        propietarios[i].NumeroTarjetaDeCredito = numeroTarjeta[i];
+
+    }
+    printf("Datos cargados correctamente!\n");
+}
+
+void cargarAutomoviles(Eautomovil automovil[])
+{
+    int i;
+    int id[10] = {1,2,3,4,5,6,7,8,9,10};
+    char patente[10][30] = {"ASD4B","ASDF4","GF4DS","ER78A","CV5BA","FG56H","489AD","X156E","Z55HJ","185RT"};
+    int marca[10] = {1,2,1,3,4,4,2,1,3,2};
+    int horarioDeEntrada[10] = {8,4,6,2,10,20,16,4,13,15};
+    int horarioDeSalida[10] = {5,6,8,4,16,8,16,15,2,17};
+    int estado[10]= {1,1,1,1,1,1,1,1,1,1};
+
+
+    for(i=0; i<10; i++)
+    {
+        automovil[i].idPropietarios = id[i];
+        strcpy(automovil[i].patente, patente[i]);
+        automovil[i].marca = marca[i];
+        automovil[i].horarioDeEntrada = horarioDeEntrada[i];
+        automovil[i].horarioDeSalida = horarioDeSalida[i];
+        automovil[i].estado = estado[i];
+    }
+    printf("Datos cargados correctamente!\n");
 }

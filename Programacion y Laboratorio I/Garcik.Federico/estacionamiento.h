@@ -215,3 +215,21 @@ void mostrarAutosConPropietarios(Eautomovil automovil[], Epropietarios propietar
 
 
  void mostrar(Eautomovil automovil[], int capacidadAutos, Epropietarios propietario[], int capacidadPropietarios, Eautomovil autoAux[], int flagCarga, int flagCargaAutos);
+
+ /** \brief hardcodea los datos de los propietarios
+  *
+  * \param el array de propietarios
+  * \return
+  *
+  */
+
+ void cargarPropietarios(Epropietarios propietarios[]);
+
+ /** \brief hardcodea los datos de los automoviles
+  *
+  * \param el array de automoviles
+  * \return
+  *
+  */
+
+void cargarAutomoviles(Eautomovil automovil[]);

@@ -30,14 +30,22 @@ int main()
         switch(opcion)
         {
         case 1:
+            /*Ingreso por teclado:
             cargarDatos(propietarios, A, flagCargaPropietarios);
+            */
+            //Datos hardcodeados:
+            cargarPropietarios(propietarios);
             flagCargaPropietarios = 1;
             break;
         case 2:
             modificarPropietario(propietarios, A, flagCargaPropietarios);
             break;
         case 3:
-            ingresoAutomovil(automoviles, flagCargaPropietarios, propietarios, A, flagCargaAutos);
+            /*Ingreso por teclado:
+            //ingresoAutomovil(automoviles, flagCargaPropietarios, propietarios, A, flagCargaAutos);
+            */
+            //Datos hardcodeados
+            cargarAutomoviles(automoviles);
             flagCargaAutos = 1;
             break;
         case 4:
