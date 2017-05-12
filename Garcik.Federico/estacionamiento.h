@@ -24,6 +24,10 @@ typedef struct
     int sumAlpha;
     int sumOtros;
     int sumTotal;
+    int maximoPago;
+    int flagMaximo;
+    int autoMasCaro;
+    char patenteMasCaro[30];
 }EsumAutos;
 
 /**brief permite ingresar al usuario un dato de tipo cadena de caracteres
@@ -247,3 +251,5 @@ void mostrarAutosConPropietarios(Eautomovil automovil[], Epropietarios propietar
 void cargarAutomoviles(Eautomovil automovil[], int flagCargaAutos, EsumAutos sumAutos[]);
 
 void calcularRecaudacionPrimera(Eautomovil automovil[], int capacidad, EsumAutos sumAutos[]);
+
+void calcularMaximoPago(int dinero, EsumAutos sumatoria[], int marca, Eautomovil automovil[], int indice);

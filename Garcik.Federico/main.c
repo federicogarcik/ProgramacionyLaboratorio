@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include "estacionamiento.h"
 
-#define A 20
-#define B 20
-#define C 20
+#define A 10
+#define B 10
+#define C 10
 
 int main()
 {
@@ -18,6 +18,7 @@ int main()
     int flagCargaAutos = 0;
     int flagEgreso = 0;
     int flagMostrar = 0;
+    sumAutos[0].flagMaximo = 0;
 
 
     do

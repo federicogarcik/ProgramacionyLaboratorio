@@ -350,6 +350,7 @@ void calcularEstadia(Eautomovil automoviles[], Epropietarios propietarios[], int
         {
             valorEstadia = (tiempoEstadia * 150);
             sumAutos[0].sumAlpha = sumAutos[0].sumAlpha + valorEstadia;
+            calcularMaximoPago(valorEstadia, sumAutos, ALPHA_ROMEO,  automoviles, indice);
 
         }
         else
@@ -358,6 +359,7 @@ void calcularEstadia(Eautomovil automoviles[], Epropietarios propietarios[], int
             {
                 valorEstadia = (tiempoEstadia * 175);
                 sumAutos[0].sumFerrari = sumAutos[0].sumFerrari + valorEstadia;
+                calcularMaximoPago(valorEstadia, sumAutos, FERRARI, automoviles, indice);
             }
             else
             {
@@ -365,11 +367,13 @@ void calcularEstadia(Eautomovil automoviles[], Epropietarios propietarios[], int
                 {
                     valorEstadia = tiempoEstadia * 200;
                     sumAutos[0].sumAudi = sumAutos[0].sumAudi + valorEstadia;
+                    calcularMaximoPago(valorEstadia, sumAutos, AUDI, automoviles, indice);
                 }
                 else
                 {
                     valorEstadia = tiempoEstadia * 250;
                     sumAutos[0].sumOtros = sumAutos[0].sumOtros + valorEstadia;
+                    calcularMaximoPago(valorEstadia, sumAutos, OTRO, automoviles, indice);
                 }
             }
         }
@@ -559,6 +563,8 @@ void mostrar(Eautomovil automovil[], int capacidadAutos, Epropietarios propietar
         sumaTotal = mostrarRecaudacionTotalPorMarca(sumAutos, automovil, capacidadAutos, flagEgreso);
         printf("************************RECAUDACION TOTAL POR ESTACIONAMIENTO******************\n");
         printf("La recaudacion total del estacionamiento es de: %d \n", sumaTotal);
+        printf("************************EL EGRESO MAS CARO FUE*********************************\n");
+        printf("El egreso mas caro fue de: %d\t Patente: %s\n", sumAutos[0].maximoPago, sumAutos[0].patenteMasCaro);
     }
     else
     {
@@ -603,7 +609,6 @@ void cargarAutomoviles(Eautomovil automovil[], int flagCargaAutos, EsumAutos sum
         sumAutos[0].sumAudi = 0;
         sumAutos[0].sumOtros = 0;
     }
-
     for(i=0; i<10; i++)
     {
         automovil[i].idPropietarios = id[i];
@@ -637,6 +642,7 @@ void calcularRecaudacionPrimera(Eautomovil automovil[], int capacidad, EsumAutos
                 {
                     valorEstadia = (tiempoEstadia * 150);
                     sumAutos[0].sumAlpha = sumAutos[0].sumAlpha + valorEstadia;
+                    calcularMaximoPago(valorEstadia, sumAutos, ALPHA_ROMEO, automovil, i);
                 }
                 else
                 {
@@ -644,6 +650,7 @@ void calcularRecaudacionPrimera(Eautomovil automovil[], int capacidad, EsumAutos
                     {
                         valorEstadia = (tiempoEstadia * 175);
                         sumAutos[0].sumFerrari =  sumAutos[0].sumFerrari + valorEstadia;
+                        calcularMaximoPago(valorEstadia, sumAutos, FERRARI, automovil, i);
                     }
                     else
                     {
@@ -651,14 +658,37 @@ void calcularRecaudacionPrimera(Eautomovil automovil[], int capacidad, EsumAutos
                         {
                             valorEstadia = (tiempoEstadia * 200);
                             sumAutos[0].sumAudi =  sumAutos[0].sumAudi + valorEstadia;
+                            calcularMaximoPago(valorEstadia, sumAutos, AUDI, automovil, i);
                         }
                         else
                         {
                             valorEstadia = (tiempoEstadia * 250);
                             sumAutos[0].sumOtros =  sumAutos[0].sumOtros + valorEstadia;
+                            calcularMaximoPago(valorEstadia, sumAutos, OTRO, automovil, i);
                         }
                     }
                 }
             }
         }
+}
+
+void calcularMaximoPago(int dinero, EsumAutos sumatoria[], int marca, Eautomovil automovil[], int indice)
+{
+    if(sumatoria[0].flagMaximo == 0)
+    {
+        sumatoria[0].maximoPago = 0;
+        sumatoria[0].maximoPago = dinero;
+        sumatoria[0].autoMasCaro = marca;
+        strcpy(sumatoria[0].patenteMasCaro, automovil[indice].patente);
+    }
+    else
+    {
+        if(dinero > sumatoria[0].maximoPago)
+        {
+            sumatoria[0].maximoPago = dinero;
+            sumatoria[0].autoMasCaro = marca;
+            strcpy(sumatoria[0].patenteMasCaro, automovil[indice].patente);
+        }
+    }
+    sumatoria[0].flagMaximo = 1;
 }

@@ -51,3 +51,16 @@
 	<stdlib.h>
 	"estacionamiento.h"
 
+1494596522 source:c:\users\alumno\desktop\programacionylaboratorio-master\garcik.federico\main.c
+	<stdio.h>
+	<stdlib.h>
+	"estacionamiento.h"
+
+1494597289 c:\users\alumno\desktop\programacionylaboratorio-master\garcik.federico\estacionamiento.h
+
+1494597435 source:c:\users\alumno\desktop\programacionylaboratorio-master\garcik.federico\estacionamiento.c
+	<stdio.h>
+	<stdlib.h>
+	"estacionamiento.h"
+	<string.h>
+
