@@ -23,8 +23,8 @@ typedef struct
     int sumFerrari;
     int sumAlpha;
     int sumOtros;
+    int sumTotal;
 }EsumAutos;
-
 
 /**brief permite ingresar al usuario un dato de tipo cadena de caracteres
 *
@@ -154,7 +154,7 @@ int buscarPorPatente(Eautomovil automoviles[], int capacidad, int flagCarga);
  *
  */
 
-void calcularEstadia(Eautomovil automovil[], Epropietarios propietarios[], int capacidadPropietarios, int flagCarga, int flagCargaAutos, EsumAutos sumAutos[]);
+void calcularEstadia(Eautomovil automovil[], Epropietarios propietarios[], int capacidadPropietarios, int flagCarga, int flagCargaAutos, EsumAutos sumAutos[], int capacidadAutos, int flagEgreso, int flagMostrar);
 
 /** \brief tranforma las letras de uan cadena de caracteres a maysuculas
  *
@@ -204,25 +204,27 @@ void mostrarAutosConPropietarios(Eautomovil automovil[], Epropietarios propietar
 
  /** \brief muestra la recaudacion total de cada marca
   *
-  * \param el array de automovil
-  * \param la capacidad del array de automovil
-  * \return
-  *
-  */
-
-
- int mostrarRecaudacionTotalPorMarca(Eautomovil automovil[], int capacidad, EsumAutos sumAutos[], int flagHardCoded);
-
- /** \brief muestra todos los listados
-  *
-  * \param el array de automovil
-  * \param la capacidad del array de automoviles
+  * \param el array de sumatoria
   * \return regresa la suma total del estacionamiento
   *
   */
 
 
- void mostrar(Eautomovil automovil[], int capacidadAutos, Epropietarios propietario[], int capacidadPropietarios, Eautomovil autoAux[], int flagCarga, int flagCargaAutos, EsumAutos sumAutos[], int flagHardCoded);
+ int mostrarRecaudacionTotalPorMarca(EsumAutos sumAutos[], Eautomovil automovil[], int capacidad, int flagEgreso);
+
+ /** \brief muestra todos los listados
+  *
+  * \param el array de automovil
+  * \param la capacidad del array de automoviles
+  * \param el array de propietarios
+  * \param la capacidad del array de propietarios
+  * \param el array de sumatoria
+  * \param la bandera de la carga de propietarios
+  *
+  */
+
+
+ void mostrar(Eautomovil automovil[], int capacidadAutos, Epropietarios propietario[], int capacidadPropietarios, Eautomovil autoAux[], int flagCarga, int flagCargaAutos, EsumAutos sumAutos[], int flagEgreso);
 
  /** \brief hardcodea los datos de los propietarios
   *
@@ -236,8 +238,12 @@ void mostrarAutosConPropietarios(Eautomovil automovil[], Epropietarios propietar
  /** \brief hardcodea los datos de los automoviles
   *
   * \param el array de automoviles
+  * \param la bandera de la carga de autos
+  * \param el array de sumatoria
   * \return
   *
   */
 
-void cargarAutomoviles(Eautomovil automovil[]);
+void cargarAutomoviles(Eautomovil automovil[], int flagCargaAutos, EsumAutos sumAutos[]);
+
+void calcularRecaudacionPrimera(Eautomovil automovil[], int capacidad, EsumAutos sumAutos[]);

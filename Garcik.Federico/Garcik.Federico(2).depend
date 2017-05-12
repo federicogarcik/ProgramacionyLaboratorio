@@ -25,16 +25,29 @@
 	<stdlib.h>
 	"estacionamiento.h"
 
-1494516055 source:c:\users\alumno\desktop\garcik.federico\main.c
+1494512012 source:c:\users\alumno\desktop\garcik.federico\main.c
 	<stdio.h>
 	<stdlib.h>
 	"estacionamiento.h"
 
-1494516133 c:\users\alumno\desktop\garcik.federico\estacionamiento.h
+1494510928 c:\users\alumno\desktop\garcik.federico\estacionamiento.h
 
-1494516442 source:c:\users\alumno\desktop\garcik.federico\estacionamiento.c
+1494512432 source:c:\users\alumno\desktop\garcik.federico\estacionamiento.c
 	<stdio.h>
 	<stdlib.h>
 	"estacionamiento.h"
 	<string.h>
+
+1494525377 source:c:\users\fede\downloads\programacionylaboratorio-master (3)\programacionylaboratorio-master\programacion y laboratorio i\garcik.federico\estacionamiento.c
+	<stdio.h>
+	<stdlib.h>
+	"estacionamiento.h"
+	<string.h>
+
+1494525327 c:\users\fede\downloads\programacionylaboratorio-master (3)\programacionylaboratorio-master\programacion y laboratorio i\garcik.federico\estacionamiento.h
+
+1494553175 source:c:\users\fede\downloads\programacionylaboratorio-master (3)\programacionylaboratorio-master\programacion y laboratorio i\garcik.federico\main.c
+	<stdio.h>
+	<stdlib.h>
+	"estacionamiento.h"
 

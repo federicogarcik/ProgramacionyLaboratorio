@@ -13,10 +13,11 @@ int main()
     Epropietarios propietarios[A];
     Eautomovil automoviles[B];
     Eautomovil autoAux[C];
-    EsumAutos sumAutos [1];
+    EsumAutos sumAutos[10];
     int flagCargaPropietarios = 0;
     int flagCargaAutos = 0;
-    int flagHardCoded = 0;
+    int flagEgreso = 0;
+    int flagMostrar = 0;
 
 
     do
@@ -47,22 +48,22 @@ int main()
             //ingresoAutomovil(automoviles, flagCargaPropietarios, propietarios, A, flagCargaAutos);
             */
             //Datos hardcodeados
-            cargarAutomoviles(automoviles);
+            cargarAutomoviles(automoviles, flagCargaAutos, sumAutos);
             flagCargaAutos = 1;
             break;
         case 4:
-            calcularEstadia(automoviles, propietarios, A, flagCargaPropietarios, flagCargaAutos, sumAutos);
+            calcularEstadia(automoviles, propietarios, A, flagCargaPropietarios, flagCargaAutos, sumAutos, flagEgreso, B, flagMostrar);
+            flagEgreso = 1;
             break;
         case 5:
-            mostrar(automoviles, B, propietarios, A, autoAux, flagCargaPropietarios, flagCargaPropietarios, sumAutos, flagHardCoded);
-            flagHardCoded = 1;
+            mostrar(automoviles, B, propietarios, A, autoAux, flagCargaPropietarios, flagCargaPropietarios, sumAutos, flagEgreso);
+            flagMostrar = 1;
             break;
         case 6:
             seguir = 'n';
             break;
         default:
             printf("ERROR: esa opcion no es valida\n");
-            break;
         }
     }
     while(seguir=='s');
